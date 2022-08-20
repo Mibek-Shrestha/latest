@@ -1,8 +1,8 @@
 <?php
     include "include/db_config.php";
-    if(isset($_GET['cId'])){
-        $main_id = $_GET['cId'];
-        $sql_update = mysqli_query($conn, "update complaint set status = 1 where cId = '$main_id'");
+    if(isset($_GET['id'])){
+        $main_id = $_GET['id'];
+        $sql_update = mysqli_query($conn, "update complaint set status = 1 where id = '$main_id'");
     }
 
 ?>
@@ -50,8 +50,8 @@
                             <td>'. $main_result ['fullName'].'</td>
                             <td>'. $main_result ['description'].'</td>
                             <td>'.$main_result ['date'].'</td>
-                            <td> <a href="delete.php?id = '.$main_result['cId'].'">
-                            <i class="fa-solid fa-check"></i></a> &nbsp;&nbsp; <a href="delete.php?id = '.$main_result['cId'].'">
+                            <td> <a href="delete.php?id = '.$main_result['id'].'">
+                            <i class="fa-solid fa-check"></i></a> &nbsp;&nbsp; <a href="delete.php?id = '.$main_result['id'].'">
                             <i class="fa-solid fa-trash-can"></i> </a> </td>
                             </tr>';
                     }

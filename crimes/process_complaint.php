@@ -12,7 +12,7 @@
 
         $query = "insert into complaint(fullName,address, description) values('$fname','$address','$desc')";
 
-        mysqli_query($conn,$query);
+        mysqli_query($conn, $query);
         header("location:index.php");
     }
    
